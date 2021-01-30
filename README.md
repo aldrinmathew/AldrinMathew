@@ -6,7 +6,7 @@ Current active projects are ***Storycrafter*** and ***Transliberate***, both of 
 
 Currently, I am looking into the V Programming language. I have also started revising C++ programming, which I learnt in school from 2014 to 2016. I was one of those kids who answered most questions in computer class. But now, I don't remember much of C++. I still know the basic structure of functions, loops and everything, since Dart and C++ have some things in common. But a few things have changed for me, since the last time I wrote a program in C++, I was familiar with the C++11 Standard.
 
-Visit the [***ISSUES***](https://github.com/AldrinMathew/issues) respository where I post all of the issue reports and feature requests that I have made in other repositories.
+Visit the [![https://github.com/AldrinMathew/issues](https://raw.githubusercontent.com/AldrinMathew/issues/main/images/issueLabel.svg)](https://github.com/AldrinMathew/issues) respository where I post all of the issue reports and feature requests that I have made in other repositories.
 
 My Official Website: **[aldrinmathew.com](https://aldrinmathew.com)** (Currently under reconstruction and maintenance)
 
