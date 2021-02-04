@@ -13,3 +13,5 @@ My Official Website: **[aldrinmathew.com](https://aldrinmathew.com)** (Currently
 Checkout ***[Aldrin's Art Factory](https://aldrinsartfactory.com)*** (Under Maintenance) and **[github.com/aldrinsartfactory](https://github.com/aldrinsartfactory)**
 
 ![Profile views](https://gpvc.arturio.dev/AldrinMathew)
+
+![Metrics](https://metrics.lecoq.io/AldrinMathew?template=classic&config.timezone=Asia%2FCalcutta&config.animated=true)
