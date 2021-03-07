@@ -6,8 +6,6 @@ Current active projects are ***Storycrafter*** and ***Transliberate***, both of 
 
 I revisited C++ and have already started a new project using that language.
 
-Visit the [_Issues_](https://github.com/AldrinMathew/issues) respository where I post all of the issue reports and feature requests that I have made in other repositories.
-
 My Official Website: **[aldrinmathew.com](https://aldrinmathew.com)** (Currently under reconstruction and maintenance)
 
 Checkout ***[Aldrin's Art Factory](https://aldrinsartfactory.com)*** (Under Maintenance) and **[github.com/aldrinsartfactory](https://github.com/aldrinsartfactory)**
