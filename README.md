@@ -4,7 +4,7 @@
 
 <div align="center">
 <img src="https://img.shields.io/badge/expert%20in-C++,%20Flutter%20&%20Dart,%20Markdown-blue.svg?style=for-the-badge" alt="expert">
-<img src="https://img.shields.io/badge/Intermediate%20in-TypeScript,%20Javascript-orange.svg?style=for-the-badge" alt="intermediate">
+<img src="https://img.shields.io/badge/Intermediate%20in-TypeScript,%20Javascript,%20HTML%20&CSS-orange.svg?style=for-the-badge" alt="intermediate">
 <img src="https://img.shields.io/badge/Knows-Python,%20C-yellow.svg?style=for-the-badge" alt="knows">
 <img src="https://img.shields.io/badge/learning-Assembly%20&%20OpenQASM%20(Quantum%20Assembly)-green.svg?style=for-the-badge" alt="learning">
 </div>
