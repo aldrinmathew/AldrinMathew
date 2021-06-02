@@ -11,7 +11,7 @@
 
 #
 
-I mainly develop applications for Android, iOS, Windows, Mac OS and Linux. Most of projects are private because they have to public in the right time to blow up. Here is a detailed list of all of my public and private projects.
+I mainly develop applications for Android, iOS, Windows, Mac OS and Linux. Most of my projects are private, because they have to public in the right time to blow up. Here is a detailed list of all of my public and private projects.
 
 ## **Codecraft**
 
@@ -23,11 +23,11 @@ A niche minimalistic code editor written in Dart using Google's Flutter UI Frame
 
 ![](https://github.com/aldrinsartfactory/liquidart/raw/main/resources/images/liquidart.png)
 
-A Server Framewwork for the Dart Programming language. It started as a resurrection of the Aqueduct project. But currently, I am rewriting it to provide a better tool I spent 4 consecutive days to solve 6000+ errors, while migrating Aqueduct to Null Safety. But it didn't work as the project had errors beforehand that the previous team couldn't resolve. So I decided to rewrite it from scratch. [**Visit here**](https://github.com/aldrinsartfactory/liquidart)
+A Server Framewwork for the Dart Programming language. It started as a resurrection of the Aqueduct project. But currently, I am rewriting it to provide a better tool for the community. I spent 4 consecutive days to solve 6000+ errors, while migrating Aqueduct to Null Safety. But it didn't work as the project had errors beforehand that the previous team couldn't resolve. So I decided to rewrite it from scratch. [**Visit here**](https://github.com/aldrinsartfactory/liquidart)
 
 ## **dragontongue**
 
-A new programming language that I have been working on. It is implemented using LLVM in C++. Currently the Lexer is almost finalized.
+A new programming language that I have been working on. It is implemented using LLVM in C++. Currently the Lexer is almost finalized. I am also working on the Parser and Compiler.
 
 ## **Writer's Canvas**
 
