@@ -1,46 +1,55 @@
-### Author ✍ Mathematician 🤯 Philosopher 🤔 Artist 🎨 Software Developer 👨‍💻
+![qat_colorful_cover](https://github.com/qatlang/media/raw/main/images/qat_fancy_cover.png)
 
-#
+Hi, I am the creator of `qat` programming language. qat is envisioned to be a superfast, modern systems language for efficient and maintainable software...
 
-<div align="center">
-<img src="https://img.shields.io/badge/expert%20in-C++,%20Flutter%20&%20Dart,%20Markdown-blue.svg?style=for-the-badge" alt="expert">
-<img src="https://img.shields.io/badge/Intermediate%20in-TypeScript,%20Javascript,%20HTML%20&CSS-orange.svg?style=for-the-badge" alt="intermediate">
-<img src="https://img.shields.io/badge/Knows-Python,%20C-yellow.svg?style=for-the-badge" alt="knows">
-<img src="https://img.shields.io/badge/learning-Assembly%20&%20OpenQASM%20(Quantum%20Assembly)-green.svg?style=for-the-badge" alt="learning">
+<div><center>
+<a href="https://github.com/qatlang/qat/releases"><img src="https://img.shields.io/badge/Download-444444?style=for-the-badge&logo=github&logoColor=white"/></a>
+<a href="https://github.com/sponsors/aldrinmathew" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/SPONSOR-9900FF?style=for-the-badge&logo=github&logoColor=white"/></a>
+<a href="https://qat.dev" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/qat.dev-444444?style=for-the-badge&logoColor=white"/></a>
+<a href="https://youtube.com/c/aldrinmathew" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white"/></a>
+<a href="https://discord.gg/CNW3Uvptvd" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Discord-3366DD?style=for-the-badge&logo=discord&logoColor=white"/></a>
 </div>
 
-#
+Here's how much time tracked of me working on the compiler for qat: [![Wakatime](https://wakatime.com/badge/user/af510812-c60b-4a16-bb6e-fada8313362b/project/e1c4e435-cfac-41ac-9ba3-59d61be2f357.svg)](https://qat.dev). Add about 400 hours to this, because time tracking was enabled a few months after the project started. The work on the compiler started in November 2021. The first commit was on 13th December 2021, but there were a few scrapped versions before that.
 
-I mainly develop applications for Android, iOS, Windows, Mac OS and Linux. Most of my projects are private, because they have to be public in the right time to blow up. Here is a detailed list of all of my public and private projects.
+**I have spent a significant amount of time and effort on the language project, so if you appreciate that effort and you are able to support financially, consider sponsoring me on [Github Sponsors](https://github.com/sponsors/aldrinmathew). If you are not able to donate, but still want to show appreciation, drop into our [Discord Server](https://discord.gg/CNW3Uvptvd)**
 
-## **Codecraft**
+Here's a preview of the syntax of `qat`:
 
-![Codecraft Current UI](https://github.com/aldrinsartfactory/codecraft/raw/main/resources/images/raster/codecraft_syntax_highlighting.png)
+```qat
+main -> i32
+() [
+   say "Hello, World!".
+   new
+   give 0.
+]
 
-A niche minimalistic code editor written in Dart using Google's Flutter UI Framework. It shows only one line in focus to edit, and you navigae using Keyboard shortcuts. Mouse support is work in progress. [**Visit here**](https://github.com/aldrinsartfactory/codecraft)
+type String {
+   buffer :: #[var u8].
+   len    :: usize    .
+   cap    :: usize    .
 
-## **Liquidart**
+   pub:
 
-![](https://github.com/aldrinsartfactory/liquidart/raw/main/resources/images/liquidart.png)
+   from (str val) [
+      ''buffer = heap'get'<u8>(val'length).
+      ''len = val'length.
+      ''cap = val'length.
+      loop (val'length) : new I [
+         ''buffer[I] = val[I].
+      ]
+   ]
 
-A Server Framewwork for the Dart Programming language. It started as a resurrection of the Aqueduct project. But currently, I am rewriting it to provide a better tool for the community. I spent 4 consecutive days to solve 6000+ errors, while migrating Aqueduct to Null Safety. But it didn't work as the project had errors beforehand that the previous team couldn't resolve. So I decided to rewrite it from scratch. [**Visit here**](https://github.com/aldrinsartfactory/liquidart)
+   display() [
+      say'only str{''buffer, ''len}.
+   ]
 
-## **Storycrafter**
-
-A simple application for desktop platforms that helps you in writing screenplays for movies and dramas. Intuitive and expandable. Supports transitions, scenes, shots, cuts, dialogues, characters - the whole package. Currently in development. Almost complete.
-
-## **Transliberate**
-
-An application that helps in Transliteration between two languages. Transliteration is the process of writing a word based on the way it sounds, in another language. Currently it supports, Malayalam, Tamil, Spanish and English. Work in progress. Lightweight. Had to create a complex algorithm from scratch to process Natural Languages easily. Was worth it though.
-
-## **dragontongue**
-
-A new programming language that I have been working on. It is implemented using LLVM in C++. Currently the Lexer is almost finalized. I am also working on the Parser and Compiler.
-
-## **Writer's Canvas**
-
-A minimalistic note editing application for Android and iOS. Using Flutter & Dart. [**Visit here**](https://github.com/aldrinsartfactory/codecraft)
-
-Checkout ***[Aldrin's Art Factory](https://github.com/aldrinsartfactory)*** 
+   end [
+      heap'put(''buffer).
+      ''len = 0.
+      ''cap = 0.
+   ]
+}
+```
 
 ![Profile views](https://gpvc.arturio.dev/AldrinMathew)
