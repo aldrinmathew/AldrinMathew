@@ -1,6 +1,6 @@
 ![qat_colorful_cover](https://github.com/qatlang/media/raw/main/images/qat_fancy_cover.png)
 
-Hi, I am the creator of `qat` programming language. qat is envisioned to be a superfast, modern systems language for efficient and maintainable software...
+Hi, this is Aldrin Mathew. I am the creator of the `qat` programming language. qat is envisioned to be a modern systems language for efficient and maintainable software...
 
 <div><center>
 <a href="https://github.com/qatlang/qat/releases"><img src="https://img.shields.io/badge/Download-444444?style=for-the-badge&logo=github&logoColor=white"/></a>
@@ -10,46 +10,170 @@ Hi, I am the creator of `qat` programming language. qat is envisioned to be a su
 <a href="https://discord.gg/CNW3Uvptvd" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Discord-3366DD?style=for-the-badge&logo=discord&logoColor=white"/></a>
 </div>
 
-Here's how much time tracked of me working on the compiler for qat: [![Wakatime](https://wakatime.com/badge/user/af510812-c60b-4a16-bb6e-fada8313362b/project/e1c4e435-cfac-41ac-9ba3-59d61be2f357.svg)](https://qat.dev). Add about 400 hours to this, because time tracking was enabled a few months after the project started. The work on the compiler started in November 2021. The first commit was on 13th December 2021, but there were a few scrapped versions before that.
+Here is some working code written in `qat`:
 
-**I have spent a significant amount of time and effort on the language project, so if you appreciate that effort and you are able to support financially, consider sponsoring me on [Github Sponsors](https://github.com/sponsors/aldrinmathew). If you are not able to donate, but still want to show appreciation, drop into our [Discord Server](https://discord.gg/CNW3Uvptvd)**
+```rust
+type StringBase:[T] {
+	data :: multiptr:[var T, heap].
+	len :: usize.
 
-Here's a preview of the syntax of `qat`:
+	pub default [
+		''data := null.
+		''len := 0.
+	]
 
-```qat
-main -> i32
-() [
-   say "Hello, World!".
-   new
-   give 0.
-]
+	pub from (val :: str) [
+		''data := null.
+		''len := 0.
+		if (val'length != 0) [
+			''data = heap:get:[T](val'length).
+			loop (val'length) : new i [
+				''data[i] = val[i].
+			]
+			''len = val'length.
+		]
+	]
 
-type String {
-   buffer :: #[var u8].
-   len    :: usize    .
-   cap    :: usize    .
+	pub copy other [
+		''data := null.
+		''len := 0.
+		if (other'data != null) [
+			''data = heap:get:[T](other'len).
+			loop (other'len) : new i [
+				''data[i] = other'data[i].
+			]
+			''len = other'len.
+		]
+	]
 
-   pub:
+	pub operator copy = other [
+		if (''data != null) [
+			heap:put(''data).
+		]
+		if (other'data != null) [
+			''data = heap:get:[T](other'len).
+			loop (other'len) : new i [
+				''data[i] = other'data[i].
+			]
+			''len = other'len.
+		] else [
+			''data = null.
+			''len = 0.
+		]
+	]
 
-   from (str val) [
-      ''buffer = heap'get'<u8>(val'length).
-      ''len = val'length.
-      ''cap = val'length.
-      loop (val'length) : new I [
-         ''buffer[I] = val[I].
-      ]
-   ]
+	pub move other [
+		''data := other'data.
+		''len := other'len.
+		other'data = null.
+		other'len = 0.
+	]
 
-   display() [
-      say'only str{''buffer, ''len}.
-   ]
+	pub operator move = other [
+		if (''data != null) [
+			heap:put(''data).
+		]
+		''data = other'data.
+		''len = other'len.
+		if (other'data != null) [
+			other'data = null.
+			other'len = 0.
+		]
+	]
 
-   end [
-      heap'put(''buffer).
-      ''len = 0.
-      ''cap = 0.
-   ]
+	pub var:append -> ''
+	(other :: self) [
+		if (other'len > 0) [
+			if ((''data'length - ''len) >= other'len) [
+				loop (other'len) : new i [
+					''data[i + ''len] = other'data[i].
+				]
+			] else [
+				new newCap = ''len + (2 * other'len).
+				new newData = heap:get:[T](newCap).
+				loop (''len) : new i [
+					newData[i] = ''data[i].
+				]
+				loop (other'len) : new j [
+					newData[''len + j] = other'data[j].
+				]
+				heap:put(''data).
+				''data = newData.
+				''len = ''len + other'len.
+			]
+		]
+		give ''.
+	]
+
+	pub var:append_str -> ''
+	(other:: str) [
+		''var:append(self from (other)).
+		give ''.
+	]
+
+	pub var:operator << -> ''
+	(other :: str) [
+		''var:append(self from (other)).
+		give ''.
+	]
+
+	pub getCapacity -> usize
+	() [
+		give ''data'length.
+	]
+
+	pub var:extendCapacity(length :: usize) [
+		if ((length > ''data'length) && (''data != null)) [
+			new newPtr = heap:grow:[u8](''data, length).
+			if (newPtr != null) [
+				heap:put(''data).
+				''data = newPtr.
+			]
+		] else if (''data == null) [
+			''data = heap:get:[u8](length).
+		]
+	]
+
+	pub length -> usize
+	() [
+		give ''len.
+	]
+
+	pub get_data -> multiptr:[T]
+	() [
+		give ''data to multiptr:[T].
+	]
+
+	pub var:get_data -> multiptr:[var T]
+	() [
+		give ''data to multiptr:[var T].
+	]
+
+	pub operator + -> self
+	(other :: self) [
+		new var res = ''copy.
+		res'var:append(other'move).
+		give res'move.
+	]
+
+	pub operator + -> self
+	(other :: str) [
+		new var res = ''copy.
+		res'var:append_str(other).
+		give res'move.
+	]
+
+	pub operator [] -> T
+	(index :: usize) [
+		give ''data[index].
+	]
+
+	pub end [
+		if (''data != null) [
+			heap:put(''data).
+		]
+	]
 }
-```
 
-![Profile views](https://gpvc.arturio.dev/AldrinMathew)
+type String = StringBase:[u8].
+```
