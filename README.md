@@ -1,6 +1,6 @@
 ![qat_colorful_cover](https://github.com/qatlang/media/raw/main/images/qat_fancy_cover.png)
 
-Hi, I am Aldrin Mathew. I created the [`qat` programming language](https://github.com/qatlang).
+Hi, I am Aldrin Mathew. I have been developing the [`qat` programming language](https://github.com/qatlang) since 2020.
 
 `qat` is a super-fast modern systems language for reliable and maintainable software...
 
