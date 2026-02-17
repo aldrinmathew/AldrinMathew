@@ -1,8 +1,8 @@
-![qat_colorful_cover](https://github.com/qatlang/media/raw/main/images/qat_fancy_cover.png)
+![qat_colorful_cover](https://github.com/qatlang/qat/raw/main/media/qat_cover_wide.png)
 
 Hi, I am Aldrin Mathew. I have been developing the [`qat` programming language](https://github.com/qatlang) since 2020.
 
-`qat` is a super-fast modern systems language for reliable and maintainable software...
+`qat` is a modern reimagination of systems programming... It is a bold & radical approach to language design and semantics.
 
 - Find more about the language at [qatlang.org](https://qatlang.org)
 - Download the latest version from [qatlang.org/downloads](https://qatlang.org/downloads)
@@ -14,7 +14,6 @@ I use [`emacs`](https://www.gnu.org/software/emacs/download.html) and my config 
 	<center>
 		<a href="https://qatlang.org" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/qatlang.org-444444?style=for-the-badge&logoColor=white"/></a>
 		<a href="https://youtube.com/c/aldrinmathew" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white"/></a>
-		<a href="https://discord.gg/CNW3Uvptvd" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Discord-3366DD?style=for-the-badge&logo=discord&logoColor=white"/></a>
 	</center>
 	<center>
 		<a href="https://buymeacoffee.com/aldrinmathew"><img src="https://img.shields.io/badge/Buy me a coffee-fcba03?style=for-the-badge&logo=buymeacoffee&logoColor=black"/></a>
